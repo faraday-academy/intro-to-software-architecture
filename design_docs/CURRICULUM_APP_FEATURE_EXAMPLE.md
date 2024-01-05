@@ -21,20 +21,7 @@ This document outlines the design for implementing the functionality that allows
     - Allow users to modify and save the cloned curriculum independently of the original.
 4. **Diagram:**
 
-```mermaid
-sequenceDiagram
-    participant U as User
-    participant UI as Front-End
-    participant API as API Server
-    participant DB as Database
 
-    U->>UI: Clicks 'Fork' button
-    UI->>API: Sends forking request
-    API->>DB: Request to duplicate curriculum
-    DB-->>API: Confirmation with new curriculum ID
-    API-->>UI: Success message with new ID
-    U->>UI: Sees success and new curriculum
-```
 
 5. **System Changes:**
     1. **UI/UX:** Introduce a new button for forking and a section in the user dashboard for managing forked curriculums.

@@ -71,29 +71,7 @@ The Curriculum App allows users to create, manage, and share their learning curr
 
 ### 6.2 Component Diagrams
 
-```mermaid
-graph TD
-    subgraph UI["User Interface (Vue.js)"]
-        Auth["Authentication"]
-        CM["Curriculum Management"]
-    end
 
-    subgraph BE["Back-End (Node.js/Express)"]
-        AuthBE["Authentication Logic"]
-        CMBE["Curriculum Management Logic"]
-    end
-
-    subgraph DB["Database (MongoDB)"]
-        Users(("Users Collection"))
-        Curriculums(("Curriculums Collection"))
-    end
-
-    Auth -->|API Calls| AuthBE
-    CM -->|API Calls| CMBE
-    AuthBE -->|Read/Write| Users
-    CMBE -->|Read/Write| Curriculums
-
-```
 
 ### 6.3 Database Design
 
