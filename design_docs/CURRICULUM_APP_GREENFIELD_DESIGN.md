@@ -54,7 +54,7 @@ Given the security considerations for our system, we will use the follow strateg
 - **Back-End Module:** Manages server-side logic, API requests, and database interactions.
 - **Database Module:** Stores and retrieves all application data.
 ### 6.2 Component Diagrams
-[﻿CA - Component Diagram](https://app.eraser.io/workspace/mbbDc7OVVkOY4i090I1E?elements=RGAtmaZy_iAniBVTkubCHA) 
+![CA - Component Diagram](/.eraser/mbbDc7OVVkOY4i090I1E___96bAmV5BSOdQV1TYRP8TO5f7ER23___---figure---nWRMwI_XyNLkW-hQx7Esk---figure---RGAtmaZy_iAniBVTkubCHA.png "CA - Component Diagram")
 
 ### 6.3 Database Design
 - **Users Collection:** Stores user information and hashed passwords.
