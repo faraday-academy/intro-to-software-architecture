@@ -42,17 +42,15 @@
 
 ## Business Requirements:
 
-1. **Market Research:**
-   - Conduct thorough research to understand the competitive landscape and target audience.
+1. **User Feedback:**
+   - Implement mechanisms to gather user feedback for continuous improvement.
+   - Launch the MVP as quickly as possible to get feedback.
 
 2. **Monetization Strategy:**
    - Consider different monetization strategies like freemium models, subscriptions, or ads.
 
-3. **User Feedback:**
-   - Implement mechanisms to gather user feedback for continuous improvement.
-
-4. **Marketing & Promotion:**
+3. **Marketing & Promotion:**
    - Develop a marketing strategy to promote the app through various channels.
 
-5. **Legal Compliance:**
+4. **Legal Compliance:**
    - Ensure compliance with data protection laws and intellectual property rights.

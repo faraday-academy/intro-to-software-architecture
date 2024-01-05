@@ -30,7 +30,7 @@ The document proceeds to detail the architectural style, system stakeholders and
 
 ### 2.1 Architectural Style and Rationale
 
-The system will use a **Monolithic Architectural Style** for the MVP to simplify deployment and development. Given the scope and scale at this stage, a monolithic approach is cost-effective and straightforward to implement.
+The system will use a **Monolithic Architectural Style** for the MVP to simplify deployment and development. The business wants us to focus on time to launch so we can get real users on the platform and start iterating. Given the scope and scale at this stage, a monolithic approach is cost-effective and straightforward to implement.
 
 ## 3. System Stakeholders and Concerns
 
@@ -56,10 +56,17 @@ The Curriculum App allows users to create, manage, and share their learning curr
 
 ### 5.1 Key Strategies
 
+Given the current experience of the team and the requirements for this project, we will use the follow technologies:
+
 - Utilize **Vue.js** for a dynamic and responsive front-end.
 - Implement **Node.js** with **Express.js** for a robust back-end.
-- Use **MongoDB** for flexible and scalable database management.
-- Ensure security with hashed passwords and authentication tokens.
+- Use **MongoDB** for flexible and scalable database management. The complexity, scale, and dynamic nature of our data align well with this type of database.
+
+Given the security considerations for our system, we will use the follow strategy:
+
+- Security credentials will be stored in an `auth` table in the database and related to the user table through a foreign key. This will make our system flexible enough to easily swap out this table for a third party auth service as our needs change.
+- Passwords will be hashed and salted using standard encryption libraries.
+- Authentication tokens will be passed between the front-end and the API to check for authorization for objects and resources.
 
 ## 6. System Architecture
 
@@ -76,6 +83,8 @@ The Curriculum App allows users to create, manage, and share their learning curr
 ### 6.3 Database Design
 
 - **Users Collection:** Stores user information and hashed passwords.
+- **Auth Collection:** Stores hashed passwords with a foriegn key reference to the user table.
+- **AuthCodes:** Verification codes to confirm email address. They will expire after 30 minutes.
 - **Curriculums Collection:** Stores details of each curriculum, including sections and resources.
 
 
@@ -85,7 +94,8 @@ The Curriculum App allows users to create, manage, and share their learning curr
 ### 7.1 Decision Log
 
 - **Monolithic Architecture:** Chosen for its simplicity and ease of deployment for the MVP.
-- **Tech Stack Selection:** Chosen based on team expertise and community support.
+- **Tech Stack Selection:** Chosen based on team expertise, project requirements, speed of development, and community support.
+- **Authentication & Authorization:** Made the choise to handle this internally to cut down the cost and complexity to launch while still architecting to easily be able to swap for a third party system later.
 
 ## 8. Quality Attributes
 
