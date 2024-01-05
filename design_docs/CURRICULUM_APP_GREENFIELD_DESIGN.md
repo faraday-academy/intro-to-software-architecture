@@ -111,34 +111,7 @@ Given the security considerations for our system, we will use the follow strateg
 
 - Implement secure authentication, data validation, and encryption practices.
 
-```mermaid
-sequenceDiagram
-    participant U as User
-    participant UI as User Interface
-    participant S as Server
-    participant DB as Database
 
-    Note over U,UI: Login Process
-    U->>UI: Enter login credentials
-    UI->>S: Request to authenticate
-    S->>DB: Validate credentials
-    DB-->>S: Validation result
-    alt Credentials Valid
-        S-->>UI: Provide access token
-        UI-->>U: Access granted
-    else Credentials Invalid
-        S-->>UI: Deny access
-        UI-->>U: Show error message
-    end
-
-    Note over U,UI: Signup Process
-    U->>UI: Enter signup details
-    UI->>S: Request to create account
-    S->>DB: Create new user record
-    DB-->>S: Confirmation
-    S-->>UI: Provide access token (auto-login)
-    UI-->>U: Account created and access granted
-```
 
 ### 8.4 Maintainability
 
