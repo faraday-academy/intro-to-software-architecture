@@ -78,35 +78,7 @@ The Curriculum App allows users to create, manage, and share their learning curr
 - **Users Collection:** Stores user information and hashed passwords.
 - **Curriculums Collection:** Stores details of each curriculum, including sections and resources.
 
-```mermaid
-erDiagram
-    USERS ||--o{ CURRICULUMS : creates
-    CURRICULUMS {
-        string id PK "Unique identifier"
-        string name "Curriculum Name"
-        string description "Description"
-        string createdBy "User ID"
-    }
-    USERS {
-        string id PK "Unique identifier"
-        string username "Username"
-        string email "Email Address"
-        string password "Hashed Password"
-    }
-    SECTIONS ||--o{ CURRICULUMS : part_of
-    SECTIONS {
-        string id PK "Unique identifier"
-        string title "Section Title"
-        string curriculumId "Curriculum ID"
-    }
-    RESOURCES ||--o{ SECTIONS : included_in
-    RESOURCES {
-        string id PK "Unique identifier"
-        string name "Resource Name"
-        string url "URL"
-        string sectionId "Section ID"
-    }
-```
+
 
 ## 7. Key Architectural Decisions
 
