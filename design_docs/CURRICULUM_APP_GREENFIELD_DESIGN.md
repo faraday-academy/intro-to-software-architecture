@@ -54,13 +54,15 @@ Given the security considerations for our system, we will use the follow strateg
 - **Back-End Module:** Manages server-side logic, API requests, and database interactions.
 - **Database Module:** Stores and retrieves all application data.
 ### 6.2 Component Diagrams
-![CA - Component Diagram](/.eraser/mbbDc7OVVkOY4i090I1E___96bAmV5BSOdQV1TYRP8TO5f7ER23___---figure---nWRMwI_XyNLkW-hQx7Esk---figure---RGAtmaZy_iAniBVTkubCHA.png "CA - Component Diagram")
+![CA - Component Diagram](/.eraser/mbbDc7OVVkOY4i090I1E___96bAmV5BSOdQV1TYRP8TO5f7ER23___---figure---K-W3MQv2VOOBIgjhOT9IH---figure---RGAtmaZy_iAniBVTkubCHA.png "CA - Component Diagram")
 
 ### 6.3 Database Design
 - **Users Collection:** Stores user information and hashed passwords.
 - **Auth Collection:** Stores hashed passwords with a foriegn key reference to the user table.
 - **AuthCodes:** Verification codes to confirm email address. They will expire after 30 minutes.
 - **Curriculums Collection:** Stores details of each curriculum, including sections and resources.
+![Curriculum App ERD](/.eraser/mbbDc7OVVkOY4i090I1E___96bAmV5BSOdQV1TYRP8TO5f7ER23___---figure---ea_4blRnBMXGSw7VELtLt---figure----bWW5lpR8menVsaVy8pafQ.png "Curriculum App ERD")
+
 ## 7. Key Architectural Decisions
 ### 7.1 Decision Log
 - **Monolithic Architecture:** Chosen for its simplicity and ease of deployment for the MVP.
